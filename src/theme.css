@@ -16,7 +16,7 @@
   --t3x-link: #b0b5e6;
   --t3x-indigo: #606acc;
   --t3x-composer: #262729;
-  --t3x-composer-border: #262729;
+  --t3x-composer-border: transparent;
   --t3x-inline-code: #242427;
   --t3x-pill: #313234;
   --t3x-popover-border: #2a2a2c;
@@ -32,7 +32,7 @@ body, [data-slot="sidebar"], [data-workspace-area="conversation"], .composer-tip
 code, pre, kbd, .chat-markdown-codeblock, .chat-markdown code { font-family: var(--t3x-mono) !important; }
 
 /* Sidebar: flat, quiet rows with soft rounded highlight */
-[data-slot="sidebar-inner"] { border-right: 0 !important; }
+[data-slot="sidebar-inner"], [data-slot="sidebar"] :has(> [data-slot="sidebar-inner"]) { border-right-color: transparent !important; border-left-color: transparent !important; }
 [data-thread-item] { border-radius: 10px !important; }
 [data-slot="project-monogram"] svg { border-radius: 8px; }
 
@@ -76,6 +76,7 @@ code, pre, kbd, .chat-markdown-codeblock, .chat-markdown code { font-family: var
 [data-slot="composer-host"]:focus-within { border-color: var(--t3x-composer-border) !important; box-shadow: none !important; outline: none !important; }
 :root:not(.dark) [data-slot="composer-host"]:focus-within { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important; }
 [data-slot="composer-host"]::before, [data-slot="composer-host"]::after { border-radius: 24px !important; }
+[data-slot="composer-host"]::before { background-color: var(--t3x-composer) !important; border-color: transparent !important; box-shadow: none !important; }
 /* the visible card is the wrapper around composer-host */
 [data-chat-composer-form] :has(> [data-slot="composer-host"]) { border-radius: 24px !important; box-shadow: none !important; }
 [data-chat-composer-form] :has(> [data-slot="composer-host"])::before,
