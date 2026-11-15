@@ -1,4 +1,4 @@
-/* T3 Codex: the Codex app look for T3 Code. github.com/<owner>/t3-codex */
+/* T3 Codex: the Codex app look for T3 Code. github.com/HarjjotSinghh/t3-codex */
 
 :root {
   --t3x-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -32,7 +32,8 @@ body, [data-slot="sidebar"], [data-workspace-area="conversation"], .composer-tip
 code, pre, kbd, .chat-markdown-codeblock, .chat-markdown code { font-family: var(--t3x-mono) !important; }
 
 /* Sidebar: flat, quiet rows with soft rounded highlight */
-[data-slot="sidebar-inner"] { border-right: 1px solid var(--app-theme-sidebar-border) !important; }
+[data-slot="sidebar-inner"] { border-right: 1px solid #eaeaea !important; }
+.dark [data-slot="sidebar-inner"] { border-right-color: #272728 !important; }
 [data-thread-item] { border-radius: 10px !important; }
 [data-slot="project-monogram"] svg { border-radius: 8px; }
 
@@ -63,9 +64,6 @@ code, pre, kbd, .chat-markdown-codeblock, .chat-markdown code { font-family: var
   border: 0 !important;
   overflow: hidden;
 }
-
-/* Work rows (tool calls): muted, no card chrome */
-[data-timeline-row-kind="work"] { color: var(--app-theme-text-muted); }
 
 /* Composer: big rounded card, no hard border in dark */
 [data-slot="composer-host"] {

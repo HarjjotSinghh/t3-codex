@@ -16,7 +16,7 @@ Repo in the replies.
 
 ## Reply 1 (link)
 
-github.com/<owner>/t3-codex
+github.com/HarjjotSinghh/t3-codex
 
 Download themes/t3-codex.json and import it, or paste the raw link into a T3 Code thread and ask the agent to apply it.
 

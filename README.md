@@ -2,7 +2,7 @@
 
 A theme that makes [T3 Code](https://t3.codes) look like the Codex app: neutral greys, a rounded composer, soft message bubbles and a quiet sidebar. Dark and light modes are both included.
 
-![T3 Codex, dark](docs/screenshots/dark.png)
+<!-- screenshot: docs/screenshots/dark.png (coming) -->
 
 ## Install
 
@@ -19,7 +19,7 @@ You need a T3 Code build with theme support. As of November 2026 that is the Nig
 Paste this into any T3 Code thread:
 
 ```
-Apply the T3 Codex theme from https://raw.githubusercontent.com/<owner>/t3-codex/main/themes/t3-codex.json
+Apply the T3 Codex theme from https://raw.githubusercontent.com/HarjjotSinghh/t3-codex/main/themes/t3-codex.json
 ```
 
 The agent reads the file and applies it with T3 Code's theme tool.
