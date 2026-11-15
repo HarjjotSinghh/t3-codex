@@ -16,7 +16,7 @@
   --t3x-link: #b0b5e6;
   --t3x-indigo: #606acc;
   --t3x-composer: #262729;
-  --t3x-composer-border: #2c2d2f;
+  --t3x-composer-border: #262729;
   --t3x-inline-code: #242427;
   --t3x-pill: #313234;
   --t3x-popover-border: #2a2a2c;
@@ -32,13 +32,13 @@ body, [data-slot="sidebar"], [data-workspace-area="conversation"], .composer-tip
 code, pre, kbd, .chat-markdown-codeblock, .chat-markdown code { font-family: var(--t3x-mono) !important; }
 
 /* Sidebar: flat, quiet rows with soft rounded highlight */
-[data-slot="sidebar-inner"] { border-right: 1px solid #eaeaea !important; }
-.dark [data-slot="sidebar-inner"] { border-right-color: #272728 !important; }
+[data-slot="sidebar-inner"] { border-right: 0 !important; }
 [data-thread-item] { border-radius: 10px !important; }
 [data-slot="project-monogram"] svg { border-radius: 8px; }
 
-/* Chat header: blends into the canvas like Codex's title bar */
-[data-chat-header] { background: transparent !important; border-bottom-color: transparent !important; box-shadow: none !important; }
+/* Chat header: Codex's title bar sits on the chrome color */
+[data-chat-header] { background: #f7f7f7 !important; border-bottom-color: transparent !important; box-shadow: none !important; }
+.dark [data-chat-header] { background: #1c1c1d !important; }
 
 /* User message: soft bubble, big radius, no border */
 [data-user-message-bubble] {
@@ -75,6 +75,12 @@ code, pre, kbd, .chat-markdown-codeblock, .chat-markdown code { font-family: var
 :root:not(.dark) [data-slot="composer-host"] { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important; }
 [data-slot="composer-host"]:focus-within { border-color: var(--t3x-composer-border) !important; box-shadow: none !important; outline: none !important; }
 :root:not(.dark) [data-slot="composer-host"]:focus-within { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important; }
+[data-slot="composer-host"]::before, [data-slot="composer-host"]::after { border-radius: 24px !important; }
+/* the visible card is the wrapper around composer-host */
+[data-chat-composer-form] :has(> [data-slot="composer-host"]) { border-radius: 24px !important; box-shadow: none !important; }
+[data-chat-composer-form] :has(> [data-slot="composer-host"])::before,
+[data-chat-composer-form] :has(> [data-slot="composer-host"])::after { border-radius: 24px !important; }
+.dark [data-chat-composer-form] :has(> [data-slot="composer-host"]) { background: transparent !important; }
 [data-chat-composer-form] [data-slot="button"], [data-chat-composer-form] [data-slot="select-trigger"] { border-radius: 999px !important; }
 
 /* Popovers, menus, dialogs */
