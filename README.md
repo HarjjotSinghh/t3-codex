@@ -2,7 +2,14 @@
 
 A theme that makes [T3 Code](https://t3.codes) look like the Codex app: neutral greys, a rounded composer, soft message bubbles and a quiet sidebar. Dark and light modes are both included.
 
-<!-- screenshot: docs/screenshots/dark.png (coming) -->
+![T3 Codex in dark mode](docs/screenshots/dark.png)
+
+<details>
+<summary>Light mode</summary>
+
+![T3 Codex in light mode](docs/screenshots/light.png)
+
+</details>
 
 ## Install
 
